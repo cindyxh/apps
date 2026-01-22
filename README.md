@@ -3,7 +3,7 @@ This repo hosts the documentation pages for the apps
 
 ## Apps
 
-- [Little Bible](littleBible/index.html)
-- [Little Butler](littleButler/index.html)
+- [littleBible](littleBible/index.html)
+- [littleButler](littleButler/index.html)
 
 
