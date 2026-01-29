@@ -1,321 +1,375 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Support - littleBible</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-            padding: 20px;
-        }
-        
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-size: 2em;
+      }
+
+      h2 {
+        color: #34495e;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 1.5em;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+
+      h3 {
+        color: #555;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+
+      ul {
+        margin-left: 30px;
+        margin-bottom: 15px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .contact-box {
+        background-color: #ecf0f1;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 30px;
+        border-left: 4px solid #3498db;
+      }
+
+      .faq-item {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .faq-item:last-child {
+        border-bottom: none;
+      }
+
+      .faq-question {
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      .faq-answer {
+        color: #555;
+      }
+
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .feature-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .feature-item {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        border-left: 3px solid #3498db;
+      }
+
+      .feature-item strong {
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      code {
+        background-color: #f4f4f4;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9em;
+      }
+
+      @media (max-width: 600px) {
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          padding: 20px;
         }
-        
+
         h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 2em;
+          font-size: 1.5em;
         }
-        
+
         h2 {
-            color: #34495e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
+          font-size: 1.3em;
         }
-        
-        h3 {
-            color: #555;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-        }
-        
-        p {
-            margin-bottom: 15px;
-        }
-        
-        ul {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .contact-box {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
-            border-left: 4px solid #3498db;
-        }
-        
-        .faq-item {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        
-        .faq-question {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        
-        .faq-answer {
-            color: #555;
-        }
-        
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
+
         .feature-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
+          grid-template-columns: 1fr;
         }
-        
-        .feature-item {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 3px solid #3498db;
-        }
-        
-        .feature-item strong {
-            color: #2c3e50;
-            display: block;
-            margin-bottom: 5px;
-        }
-        
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 1.5em;
-            }
-            
-            h2 {
-                font-size: 1.3em;
-            }
-            
-            .feature-list {
-                grid-template-columns: 1fr;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Support & Help</h1>
-        <p style="color: #7f8c8d; margin-bottom: 30px;">
-            Welcome to littleBible support! We're here to help you get the most out of your Bible reading experience.
-        </p>
-        
-        <h2>Contact Us</h2>
-        
-        <div class="contact-box">
-            <p><strong>Email Support:</strong></p>
-            <p>
-                <a href="mailto:hexstudio.helpdesk@gmail.com">hexstudio.helpdesk@gmail.com</a>
-            </p>
-            <p style="margin-top: 15px;">
-                We typically respond within 24-48 hours. Please include:
-            </p>
-            <ul>
-                <li>Your device type (iOS, Android, etc.)</li>
-                <li>App version (found in app settings)</li>
-                <li>Description of the issue or question</li>
-            </ul>
-        </div>
-        
-        <h2>Frequently Asked Questions</h2>
-        
-        <div class="faq-item">
-            <div class="faq-question">How do I change the Bible translation?</div>
-            <div class="faq-answer">
-                Tap the settings icon (⚙️) in the app, then select your preferred translation from the dropdown menu. 
-                You can also compare two translations side-by-side by selecting a second translation.
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">How do I adjust the font size?</div>
-            <div class="faq-answer">
-                Open the settings modal and use the font size slider to adjust the text size to your preference. 
-                Your font size preference is saved automatically.
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">Does the app work offline?</div>
-            <div class="faq-answer">
-                Yes! littleBible works completely offline. All Bible content is stored locally on your device, 
-                so you can read anywhere, anytime without an internet connection.
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">How do I navigate to a specific book and chapter?</div>
-            <div class="faq-answer">
-                Use the book and chapter dropdown selectors at the top of the screen. Simply tap on the current 
-                book or chapter name to see all available options.
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">Does the app save my reading progress?</div>
-            <div class="faq-answer">
-                Yes! The app automatically saves your current book, chapter, selected translation, and font size. 
-                When you reopen the app, you'll be right where you left off.
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">Can I use the app on multiple devices?</div>
-            <div class="faq-answer">
-                Yes, you can install littleBible on multiple devices. However, your reading preferences and progress 
-                are stored locally on each device and don't sync between devices.
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">Is my data private?</div>
-            <div class="faq-answer">
-                Absolutely! littleBible does not collect, store, or transmit any personal information. All data 
-                (reading preferences, Bible content) is stored locally on your device only. See our 
-                <a href="privacy.html">Privacy Policy</a> for more details.
-            </div>
-        </div>
-        
-        <h2>App Features</h2>
-        
-        <div class="feature-list">
-            <div class="feature-item">
-                <strong>📖 Multiple Translations</strong>
-                <p>Read from various Bible translations including WEB, KJV, CUVS, and CUVT</p>
-            </div>
-            <div class="feature-item">
-                <strong>🔍 Easy Navigation</strong>
-                <p>Quickly jump to any book and chapter with intuitive dropdown selectors</p>
-            </div>
-            <div class="feature-item">
-                <strong>🌐 Side-by-Side Comparison</strong>
-                <p>Compare two translations simultaneously for deeper study</p>
-            </div>
-            <div class="feature-item">
-                <strong>⚙️ Customizable Font Size</strong>
-                <p>Adjust text size from 12px to 24px for comfortable reading</p>
-            </div>
-            <div class="feature-item">
-                <strong>💾 Auto-Save Preferences</strong>
-                <p>Your settings and reading position are saved automatically</p>
-            </div>
-            <div class="feature-item">
-                <strong>📴 Fully Offline</strong>
-                <p>No internet connection required - all content stored locally</p>
-            </div>
-        </div>
-        
-        <h2>Troubleshooting</h2>
-        
-        <h3>App Won't Open</h3>
-        <ul>
-            <li>Make sure you have the latest version installed</li>
-            <li>Try restarting your device</li>
-            <li>Uninstall and reinstall the app</li>
-        </ul>
-        
-        <h3>Database Errors</h3>
-        <ul>
-            <li>Uninstall the app completely</li>
-            <li>Reinstall from the app store</li>
-            <li>This will reset the database and should resolve the issue</li>
-        </ul>
-        
-        <h3>Translations Not Showing</h3>
-        <ul>
-            <li>Ensure you're using the latest app version</li>
-            <li>Try uninstalling and reinstalling the app</li>
-            <li>Check that the translation name appears in the settings dropdown</li>
-        </ul>
-        
-        <h3>Font Size Not Saving</h3>
-        <ul>
-            <li>Make sure you're adjusting the font size in the settings modal</li>
-            <li>Close and reopen the app to verify the setting persists</li>
-            <li>If issues persist, try reinstalling the app</li>
-        </ul>
-        
-        <h2>Bible Content</h2>
-        
+      <h1>Support & Help</h1>
+      <p style="color: #7f8c8d; margin-bottom: 30px">
+        Welcome to littleBible support! We're here to help you get the most out of your Bible
+        reading experience.
+      </p>
+
+      <h2>Contact Us</h2>
+
+      <div class="contact-box">
+        <p><strong>Email Support:</strong></p>
         <p>
-            The Bible text in littleBible is provided by <strong>© Aionian Bible (AionianBible.org)</strong> 
-            and is licensed under <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong>.
+          <a href="mailto:hexstudio.helpdesk@gmail.com">hexstudio.helpdesk@gmail.com</a>
         </p>
-        
-        <h2>App Information</h2>
-        
-        <div class="contact-box">
-            <p><strong>App Name:</strong> littleBible</p>
-            <p><strong>Developer:</strong> Hex Studio</p>
-            <p><strong>Version:</strong> 1.0.0</p>
-            <p><strong>Platforms:</strong> iOS, Android</p>
+        <p style="margin-top: 15px">We typically respond within 24-48 hours. Please include:</p>
+        <ul>
+          <li>Your device type (iOS, Android, etc.)</li>
+          <li>App version (found in app settings)</li>
+          <li>Description of the issue or question</li>
+        </ul>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I change the Bible translation?</div>
+        <div class="faq-answer">
+          Tap the settings icon (⚙️) in the app, then select your preferred translation from the
+          dropdown menu. You can also compare two translations side-by-side by selecting a second
+          translation.
         </div>
-        
-        <h2>Feedback & Suggestions</h2>
-        
-        <p>
-            We love hearing from our users! If you have suggestions for new features, improvements, or 
-            encounter any issues, please email us at 
-            <a href="mailto:hexstudio.helpdesk@gmail.com">hexstudio.helpdesk@gmail.com</a>.
-        </p>
-        
-        <p style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #7f8c8d; font-size: 0.9em; text-align: center;">
-            Thank you for using littleBible! We hope this app helps you in your journey of exploring Scripture.
-        </p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I adjust the font size?</div>
+        <div class="faq-answer">
+          Open the settings modal and use the font size slider to adjust the text size from 12px to
+          32px. Your font size preference is saved automatically.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Does the app work offline?</div>
+        <div class="faq-answer">
+          Yes! littleBible works completely offline. All Bible content is stored locally on your
+          device, so you can read anywhere, anytime without an internet connection.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I navigate to a specific book and chapter?</div>
+        <div class="faq-answer">
+          Use the book and chapter dropdown selectors at the top of the screen. Simply tap on the
+          current book or chapter name to see all available options.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I customize the theme color and dark mode?</div>
+        <div class="faq-answer">
+          Open the settings modal and go to the "Theme Color" section to choose from 8 colors
+          (Purple, Blue, Teal, Green, Orange, Red, Pink, Indigo). Under "Appearance" you can set
+          light mode, dark mode, or match your system. Your preferences are saved automatically.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I navigate between chapters?</div>
+        <div class="faq-answer">
+          Tap anywhere on the reading area to show or hide the floating navigation buttons
+          (previous/next chapter). You can also tap the book or chapter selector at the top of the
+          screen to jump to a specific book and chapter.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Does the app save my reading progress?</div>
+        <div class="faq-answer">
+          Yes! The app automatically saves your current book, chapter, selected translation, font
+          size, and theme color. When you reopen the app, you'll be right where you left off with
+          all your preferences intact.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I listen to the Bible (text-to-speech)?</div>
+        <div class="faq-answer">
+          Tap the speaker icon at the bottom of the screen to open TTS controls. Tap play to hear
+          the current chapter read aloud. You can pause and resume; the app supports English and
+          Chinese. Speech is generated on your device only; no audio or text is sent to our servers.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I use the app on multiple devices?</div>
+        <div class="faq-answer">
+          Yes, you can install littleBible on multiple devices. However, your reading preferences
+          and progress are stored locally on each device and don't sync between devices.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Is my data private?</div>
+        <div class="faq-answer">
+          Absolutely! littleBible does not collect, store, or transmit any personal information. All
+          data (reading preferences, Bible content) is stored locally on your device only. See our
+          <a href="privacy.html">Privacy Policy</a> for more details.
+        </div>
+      </div>
+
+      <h2>App Features</h2>
+
+      <div class="feature-list">
+        <div class="feature-item">
+          <strong>📖 Multiple Translations</strong>
+          <p>Read from various Bible translations including WEB, KJV, CUVS, and CUVT</p>
+        </div>
+        <div class="feature-item">
+          <strong>🔍 Easy Navigation</strong>
+          <p>Quickly jump to any book and chapter with intuitive dropdown selectors</p>
+        </div>
+        <div class="feature-item">
+          <strong>🌐 Side-by-Side Comparison</strong>
+          <p>Compare two translations simultaneously for deeper study</p>
+        </div>
+        <div class="feature-item">
+          <strong>🎨 Theme Color Customization</strong>
+          <p>Personalize your app with 8 beautiful theme colors</p>
+        </div>
+        <div class="feature-item">
+          <strong>⚙️ Customizable Font Size</strong>
+          <p>Adjust text size from 12px to 32px for comfortable reading</p>
+        </div>
+        <div class="feature-item">
+          <strong>🔊 Text-to-Speech (TTS)</strong>
+          <p>Listen to the current chapter read aloud; play, pause, and resume. Supports English and Chinese</p>
+        </div>
+        <div class="feature-item">
+          <strong>🔄 Floating Navigation</strong>
+          <p>Tap the screen to show or hide previous/next chapter buttons</p>
+        </div>
+        <div class="feature-item">
+          <strong>🌙 Dark Mode</strong>
+          <p>Choose light, dark, or system theme in settings for comfortable reading</p>
+        </div>
+        <div class="feature-item">
+          <strong>💾 Auto-Save Preferences</strong>
+          <p>Your settings, theme color, and reading position are saved automatically</p>
+        </div>
+        <div class="feature-item">
+          <strong>📴 Fully Offline</strong>
+          <p>No internet connection required - all content stored locally</p>
+        </div>
+      </div>
+
+      <h2>Troubleshooting</h2>
+
+      <h3>App Won't Open</h3>
+      <ul>
+        <li>Make sure you have the latest version installed</li>
+        <li>Try restarting your device</li>
+        <li>Uninstall and reinstall the app</li>
+      </ul>
+
+      <h3>Database Errors</h3>
+      <ul>
+        <li>Uninstall the app completely</li>
+        <li>Reinstall from the app store</li>
+        <li>This will reset the database and should resolve the issue</li>
+      </ul>
+
+      <h3>Translations Not Showing</h3>
+      <ul>
+        <li>Ensure you're using the latest app version</li>
+        <li>Try uninstalling and reinstalling the app</li>
+        <li>Check that the translation name appears in the settings dropdown</li>
+      </ul>
+
+      <h3>Font Size Not Saving</h3>
+      <ul>
+        <li>Make sure you're adjusting the font size in the settings modal</li>
+        <li>Close and reopen the app to verify the setting persists</li>
+        <li>If issues persist, try reinstalling the app</li>
+      </ul>
+
+      <h3>Text-to-Speech Not Working or Sounds Wrong</h3>
+      <ul>
+        <li>Ensure your device volume is up and not on silent</li>
+        <li>On Android, if resume replays a few words, we recommend pausing and resuming again; the app will continue from the correct position</li>
+        <li>Check that you have a chapter loaded; TTS reads the currently displayed chapter</li>
+      </ul>
+
+      <h2>Bible Content</h2>
+
+      <p>
+        The Bible text in littleBible is provided by
+        <strong>© Aionian Bible (AionianBible.org)</strong> and is licensed under
+        <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong>.
+      </p>
+
+      <h2>Feedback & Suggestions</h2>
+
+      <p>
+        We love hearing from our users! If you have suggestions for new features, improvements, or
+        encounter any issues, please email us at
+        <a href="mailto:hexstudio.helpdesk@gmail.com">hexstudio.helpdesk@gmail.com</a>.
+      </p>
+
+      <p
+        style="
+          margin-top: 40px;
+          padding-top: 20px;
+          border-top: 1px solid #ddd;
+          color: #7f8c8d;
+          font-size: 0.9em;
+          text-align: center;
+        "
+      >
+        Thank you for using littleBible! We hope this app helps you in your journey of exploring
+        Scripture.
+      </p>
     </div>
-</body>
+  </body>
 </html>
